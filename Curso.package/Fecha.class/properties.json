@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "Curso",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"dia",
+		"mes",
+		"año"
+	],
+	"name" : "Fecha",
+	"type" : "normal"
+}
