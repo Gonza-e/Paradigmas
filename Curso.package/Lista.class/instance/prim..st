@@ -1,4 +1,4 @@
-accesing
+accessing
 prim: unNodo
 	"Setter para prim"
 	
