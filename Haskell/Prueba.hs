@@ -140,3 +140,12 @@ binario num = (binario (div num 2) ) * 10 + mod num 2
 factorial :: Int -> Int 
 factorial 0 = 1 
 factorial num = foldl (*) 1 [1..num]
+
+-- 4.3. Definir una función rep que genere la lista infinita resultante de la aplicación
+-- sucesiva de una función de un argumento a un cierto valor, tal que: 
+-- rep f x = [x, f x, f (f x), ...]. 
+
+rep :: (a -> a) -> a -> [a]
+rep f x = f x : rep f (f x)
+
+
