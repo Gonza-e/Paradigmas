@@ -125,3 +125,11 @@ terna xs ys = [ (x,y,x*y) | x <- xs, y <- ys, mod x 2 == 0, mod y 3 == 0, mod (x
 
 funcionIdentidad :: [Int] -> [Int]-> [(Int,Int)]
 funcionIdentidad xs ys = [ (x,y) | x <- xs, y <- ys, y == x]
+
+-- Mostrar si el n-esimo elemento de una lista es par
+elementoPar :: [Int] -> Int -> Bool 
+elementoPar [] _ = False 
+elementoPar (x:xs) 1 = mod x 2 == 0
+elementoPar (x:xs) num = elementoPar xs (num - 1) 
+
+
