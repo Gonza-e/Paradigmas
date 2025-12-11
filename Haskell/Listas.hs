@@ -132,4 +132,13 @@ elementoPar [] _ = False
 elementoPar (x:xs) 1 = mod x 2 == 0
 elementoPar (x:xs) num = elementoPar xs (num - 1) 
 
+-- Contar palabras 
+
+contarPal :: String -> Int
+contarPal [] = 0  
+contarPal (x:[]) = 1
+contarPal (x:xs) 
+    | x == ' ' = 1 + contarPal xs 
+    | otherwise = contarPal xs   
+
 
