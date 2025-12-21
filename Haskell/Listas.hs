@@ -11,21 +11,17 @@ longitud (_:xs) = 1 + longitud xs
 -- 2.6) Dada una cadena s / long(s) >= n, implemente una función carn que retorne el n-ésimo carácter de s. 
 carn :: [a] -> Int -> a 
 carn [] n = error "Vacio"
-carn (x:xs) n = 
-    if n == 1 then
-        x 
-    else 
-        carn xs (n - 1)  
+carn (x:xs) n 
+    | n == 1 = x 
+    | otherwise = carn xs (n - 1)
 
 -- 2.7) Escribir una función recursiva que sume todos los números menores de 3 que aparezcan en una lista de enteros usando guardas. 
 
 sumMenores3 :: [Int] -> Int
 sumMenores3 [] = 0 
-sumMenores3 (x:xs) = 
-    if x < 3 then 
-        x + sumMenores3 xs 
-    else 
-        sumMenores3 xs 
+sumMenores3 (x:xs) 
+    | x < 3 = x + sumMenores3 xs 
+    | otherwise = sumMenores3 xs 
         
 -- 2.8) Escribir una función recursiva que calcule el máximo elemento de la lista. 
 
@@ -33,11 +29,9 @@ sumMenores3 (x:xs) =
 
 mostrarPar :: [Int] -> Int -> Bool 
 mostrarPar [] n = error "Lista vacia"
-mostrarPar (x:xs) n =
-    if n == 1 then 
-        mod x 2 == 0
-    else 
-        mostrarPar xs (n - 1)
+mostrarPar (x:xs) n 
+    | n == 1 = mod x 2 == 0
+    | otherwise = mostrarPar xs (n - 1)
 
 -- 2.10) Definir recursivamente una función cola que devuelve los últimos n-1 caracteres de una cadena. 
 

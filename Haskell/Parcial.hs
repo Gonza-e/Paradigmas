@@ -49,3 +49,7 @@ armarLista1 = [ x | x <- [1..], esPerfecto x]
 -- Parcial 2025 (com1)
 conjuncion :: [Bool] -> Bool 
 conjuncion xs = foldl (&&) True xs 
+
+-- Parcial 2025 (com1)
+disyuncion :: [Bool] -> Bool 
+disyuncion xs = foldl (||) False xs 
